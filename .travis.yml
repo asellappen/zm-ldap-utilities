@@ -3,16 +3,24 @@
 # Package             : zm-ldap-utilities
 # Source Repo         : https://github.com/Zimbra/zm-ldap-utilities
 # Travis Job Link     : https://travis-ci.com/github/asellappen/zm-ldap-utilities/
-# Created travis.yml  : No
+# Created travis.yml  : yes
 # Maintainer          : Arumugam N S <asellappen@yahoo.com> / Priya Seth<sethp@us.ibm.com>
 #
 # Script License      : Apache License, Version 2 or later
 #
 # ----------------------------------------------------------------------------
-language: perl
+language: java
 
 arch:
     - amd64
     - ppc64le
 
 dist: bionic
+
+install:
+   - sudo apt update
+   - sudo apt install ant
+
+script:
+
+   - ant
