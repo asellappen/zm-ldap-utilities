@@ -22,5 +22,4 @@ install:
    - sudo apt install ant
 
 script:
-
-   - ant
+  ant -f ${TRAVIS_BUILD_DIR}/build.xml
